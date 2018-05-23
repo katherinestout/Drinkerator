@@ -1,0 +1,13 @@
+body {
+    /* Box-model */
+    padding: 0;
+  
+    /* Positioning */
+    margin: 0;
+    font-family: font-family: 'Roboto', sans-serif;
+  
+    /* Typography */
+    font-size: 18px;
+    line-height: 150%;
+    color: #333;
+    
