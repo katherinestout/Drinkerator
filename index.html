@@ -3,147 +3,186 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+
+    <title>Drinkerator</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <script src="./assets/javascript/main.js" type="text/javascript"></script>
+
 <style>
     .center{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-</style> 
+</style>
 </head>
-  <body>
+
+<body>
   <section class="hero  has-background-white">
     <div class="hero-body">
         <div class="container">
-                <img src="assets/images/drinkeratorlogo.png" alt="" class="img drinkeratorlogo" style="float:left;width:261px;height:107px;"> 
-                </div>
-                </div>
-</section>
-<section class="section has-background-light has-text-centered">
-<div class="container">
-<div class="columns">
-<div class="column is-half">
-    <!-- Drink Title -->
-        <div class="notification">
-        <div class="drink">
-         <h1 class="title is-size-4">
-              Choose a drink
-            </h1>
-            </div>
-            </div>
-            </div>
-            <!-- Style Title -->
-    <div class="column is-half">
-        <div class="notification">
-            <div class="style">
-            <h1 class="title is-size-4">
-              Choose a style
-                </h1>
-              </div>
-              </div>
-            </div>
-            
-         
+                <img src="assets/images/drinkeratorlogo.png" alt="" class="img drinkeratorlogo" style="float:left;width:261px;height:107px;">
+        </div>
     </div>
-    <div class="columns">
-            <div class="column is-half">
-            <!--Gin Button-->
-            <div class="notification is-danger">
-            <h1 id ="gin" class="title is-size-4">
-                         Gin
-                            </h1>
-                        
-                        </div>
-                        </div>
-    <div class="column is-half">
-            <div class="notification is-black">
-            <!--Strong Button-->
-            <h1 id="strong" class="title is-size-4">
-                          Strong
-                            </h1>
-                         
-                        </div>
-                        </div>
-            
+  </section>
 
-                     
-                </div>
-                <!-- Whiskey Button -->
-    <div class="columns">
-            <div class="column is-half">
-            
-                    <div class="notification is-warning">
-                    <h1 id="whiskey" class="title is-size-4">
-                                     Whiskey
-                                        </h1>
-                                   
-                                    </div>
-                                    </div>
-                                    <!-- Fruity Button -->
-             <div class="column is-half">
-                                <div class="notification is-primary">
-                               
-                                    <h1 id="fruity" class="title is-size-4">
-                                      Fruity
-                                        </h1>
-                                     
-                                    </div>
-                                    </div>
-                        
+<section class="section has-background-white has-text-centered">
+
+
+    <!--first options-->
+
+        <div class="box has-text-centered" style="width: 100%; height: 100%;">
+ 
+                <a class="button is-large is-primary is-rounded" id="iknow"> I KNOW WHAT I WANT </a>
+                <a class="button is-large is-danger is-rounded" id="dontknow"> I DONT KNOW WHAT I WANT</a>
         
-                </div>
-            <!--Rum Button-->
-<div class="columns">
-        <div class="column is-half">
-            
-        <div class="notification is-link">
-        <h1 id="rum" class="title is-size-4">
-            Rum
-        </h1>
+           
+        </div>
+
+
     
-        </div>
-        </div>
-    <div class="column is-half">
-        <div class="notification is-danger">
-        <!--Refreshing Button-->
-        <h1 id="refreshing" class="title is-size-4">
-            Refreshing
-            </h1>
-            
-            </div>
-        </div>
-            
-       
-                     
+
+<!-- Container for set of options-->
+<div id="container" id="container2">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+                <div class="is-size-4">
+                        <h1> Choose a Style of Drink:</h1>
+                    </div>
+                <div class="column" id="strong2">                   
+                    <div>
+                        <a class="button is-danger is-large is-rounded"style="width: 100%;">
+                            Strong</a> 
+                    </div>
                 </div>
-                <!--Tequila Button  -->
-<div class="columns">
-<div class="column is-half">
- <div class="notification is-info">
-<h1 id="tequila" class="title is-size-4">
-Tequila
-</h1>
+                <div class="column" id="fruity2">
+                    <div>
+                            <a class="button is-warning is-large is-rounded"style="width: 100%;"> 
+                                Fruity</a>
+                    </div>
+                </div>
+                <div class="column" id="refreshing2">
+                    <div>
+                            <a class="button is-success is-large is-rounded" style="width: 100%;">    
+                                Refreshing</a>
+                    </div>
+                </div>
+            </div>
+            </div>
 </div>
-</div>
+  </div>
+
+<!-- Second part of code options-->
+  <div class="container" id="container">
+        <div class="columns" id="main">
+          <div class="column is-half" id="half1">
+                <div class="is-size-4">
+                        <h1> Choose a  Drink:</h1>
+
+                    </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="gin">
+                <div>
+                  <a class="button is-danger is-large is-rounded" style="width: 100%;">
+                      Gin</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="rum">
+                <div>
+                  <a class="button is-warning is-large is-rounded" style="width: 100%;">
+                      Rum</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="tequila">
+                <div>
+                  <a class="button is-success is-large is-rounded" style="width: 100%;">
+                      Tequila</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="whiskey">
+                <div>
+                  <a class="button is-link is-large is-rounded" style="width: 100%;">
+                      Whiskey</a>
+                </div>
+              </div>
+            </div>
+      
+          </div>
 
 
- </div>
-</div>
-     </section>
-  </body>
+
+
+
+      <!--First set of container stuff-->
+          <div class="column is-half" id="half2">
+            <div class="columns">
+              <div class="column is=auto" id="strong">
+                    <div class="is-size-4" style="width: 100%;">
+            <h1> Choose a Style of Drink:</h1>
+                        </div>
+
+
+                <div>
+                  <a class="button is-info is-large is-rounded"style="width: 100%;">Strong</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="fruity">
+                <div>
+                  <a class="button is-success is-large is-rounded" style="width: 100%;">Fruity</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="columns">
+              <div class="column is=auto" id="refreshing">
+                <div>
+                  <a class="button is-danger is-large is-rounded" style="width: 100%;">Refreshing</a>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+
+</section>
+</body>
+
+
 <!-- Footer -->
   <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
             <p>
-              <strong>Drinkerator</strong> by Marcus, Dean, and Katie. 
+              <strong>Drinkerator</strong> by Marcus, Dean, and Katie.
             </p>
           </div>
         </div>
       </footer>
-      
+
 </html>
