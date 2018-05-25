@@ -156,9 +156,9 @@ footer {
 #reset {
   margin-bottom: 20px;
 }
-#foot {
-  margin-right: 100px;
-}
+/* #foot {
+  margin-right: 10%;
+} */
 .question {
   font-size: 30px;
   margin-bottom: 20px;
