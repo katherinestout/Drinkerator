@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-
 // 1st choice buttons
 $("#iKnow").click(function() {
   $("#doIknow").toggle("slow");
