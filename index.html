@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Drinkerator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    
+
+
+    <script src="./assets/javascript/main.js" type="text/javascript"></script>
+
+<style>
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+
+<body>
+  <section class="hero  has-background-white">
+    <div class="hero-body">
+        <div class="container">
+                <img src="assets/images/drinkeratorlogo.png" alt="" class="img drinkeratorlogo" id="logo" style="float:left;width:261px;height:107px;">
+        </div>
+    </div>
+  </section>
+
+<section class="section has-background-white has-text-centered">
+<div class="container" id="container">
+
+
+<!--1st button set: choose path  -->
+  <div class="columns" id="doIknow">
+
+    <div class="column is-half">
+    <a class="button is-large is-primary is-rounded" id="iKnow">I KNOW MY SPIRIT</a>
+    </div>
+
+    <div class="column is-half">
+    <a class="button is-large is-danger is-rounded" id="dontKnow">I DONT KNOW WHAT I WANT</a>
+    </div>
+
+  </div>
+
+<!--second button set: choose spirit -->
+  <div id="spiritChoice">
+      <div class="columns">
+        <div class="column is-auto" id="gin">
+          <a class="button is-danger is-large is-rounded" style="width: 100%;">
+              Gin</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="rum">
+          <a class="button is-warning is-large is-rounded" style="width: 100%;">
+              Rum</a>
+          </div>
+        </div>
+
+
+      <div class="columns">
+        <div class="column is-auto" id="tequila">
+          <a class="button is-success is-large is-rounded" style="width: 100%;">
+              Tequila</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="whiskey">
+          <a class="button is-link is-large is-rounded" style="width: 100%;">
+              Whiskey</a>
+        </div>
+      </div>
+
+    </div>
+
+<!--3rd button set: choose style for "I know"  -->
+
+    <div class="column is-auto invisible" id="styleChoice">
+
+      <div class="columns">
+        <div class="column is-auto" id="strong">
+          <a class="button is-danger is-large is-rounded"style="width: 100%;">
+              Strong</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="fruity">
+          <a class="button is-warning is-large is-rounded"style="width: 100%;">
+              Fruity</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="refreshing">
+          <a class="button is-success is-large is-rounded" style="width: 100%;">
+              Refreshing</a>
+        </div>
+      </div>
+
+    </div>
+
+<!--4th button set: choose style for "I don't know"  -->
+    <div class="column is-auto invisible" id="styleChoice2">
+
+      <div class="columns">
+        <div class="column is-auto" id="strong2">
+          <a class="button is-danger is-large is-rounded"style="width: 100%;">
+              Strong</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="fruity2">
+          <a class="button is-warning is-large is-rounded"style="width: 100%;">
+              Fruity</a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-auto" id="refreshing2">
+          <a class="button is-success is-large is-rounded" style="width: 100%;">
+              Refreshing</a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+<!--make my drink button-->
+<div class="columns" id="makeIt">
+  <div class="column is-auto">
+    <button class="button is-link is-large is-rounded" style="width: 100%;">
+        Make My Drink!</button>
+  </div>
+</div>
+
+<!--shaker animation-->
+    <div class="columns" id="shaker">
+      <div class="column is-auto">
+        <img src="./assets/images/gifshacker.gif" id="shakergif">
+      </div>
+    </div>
+
+<!--drink recipe cards  -->
+<section class="section has-background-white has-text-centered" id="mai-tai">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/Mai-Tai.png" alt="" class="Mai-Tai" style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Mai Tai</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz light rum</li>
+                      <li>1oz gold rum</li>
+                      <li>.5oz orgeat</li>
+                      <li>.5oz orange Curacao</li>
+                      <li>1oz lime</li>
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients in a shaker</li>
+                      <li>Add ice and shake until well chilled</li>
+                      <li>Strain into rocks glass over ice</li>
+                      <li>Garnish with spent lime shell (filled with dark rum, if desired) and a sprig of mint</li>
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="martini">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/Martini.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Martini</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz London dry gin</li>
+                      <li>1oz dry vermouth</li>
+                      <li>2 dashes of orange bitters</li>
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into chilled coupe glass</li>
+                      <li>Garnish with a lemon twist</li>
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="negroni">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/negroni.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Negroni</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz gin</li>
+                      <li>1oz Campari</li>
+                      <li>1oz sweet vermouth</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into a rocks glass over one large ice cube</li>
+                      <li>Garnish with an orange peel</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="hanky-panky">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/hanky-panky.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Hanky Panky</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz gin</li>
+                      <li>1.5oz sweet vermouth</li>
+                      <li>2 dashes Frenet Branca</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Fill with ice and stir until chilled</li>
+                      <li>Strain into a chilled coupe glass</li>
+                      <li>Garnish with an orange twist</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="royal-hawaiian">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/royal-hawaiian.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Royal Hawaiian</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz gin</li>
+                      <li>.5oz lemon juice</li>
+                      <li>1oz pineapple juice</li>
+                      <li>.25oz orgeat</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain into a chilled coupe glass</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="seventh-heaven">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/seventh-heaven.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Seventh Heaven</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2.25 oz gin</li>
+                      <li>.75oz Luxardo Maraschino liqueur</li>
+                      <li>.75oz grapefruit juice</li>
+                      <li>Sprig of mint</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add gin, maraschino and juice to shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain into a chilled coupe glass</li>
+                      <li>Garnish with mint sprig</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="slippery-when-wet">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/slippery-when-wet.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Slippery When Wet</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1 large strawberry</li>
+                      <li>.75oz lemon juice</li>
+                      <li>.5oz honey</li>
+                      <li>2oz gin</li>
+                      <li>1 tsp Greek yogurt</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add strawberry, lemon juice and honey to a shaker</li>
+                      <li>Muddle until well combined</li>
+                      <li>Add gin and yogurt</li>
+                      <li>Add ice and shake until well chilled</li>
+                      <li>Double-strain into a rocks glass over crushed ice</li>
+                      <li>Garnish with a strawberry slice and freshly-ground black pepper</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="southside">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/southside.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Southside</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz London dry gin</li>
+                      <li>.75oz lime juice</li>
+                      <li>.75oz lemon juice</li>
+                      <li>1oz simple syrup</li>
+                      <li>10 mint leaves</li>
+                      <li>Club soda</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients except soda to shaker</li>
+                      <li>Add ice and shake until well chilled</li>
+                      <li>Strain into a collins glass over ice</li>
+                      <li>Top with soda</li>
+                      <li>Garnish with mint sprig</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="old-maid">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/old-maid.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Old Maid</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz gin</li>
+                      <li>1oz lime juice</li>
+                      <li>.75oz simple syrup</li>
+                      <li>3 cucumber wheels</li>
+                      <li>6-7 mint leaves</li>
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add mint, syrup and cucumber to shaker and muddle gently</li>
+                      <li>Add gin, lime and ice and shake until well chilled</li>
+                      <li>Double-strain into a rocks glass over ice</li>
+                      <li>Garnish with a cucumber wheel and mint sprig</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="gin-tonic">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/gin-tonic.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Gin and Tonic</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz gin</li>
+                      <li>Tonic water</li>
+                      <li>Lime wedge</li>
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add gin to a rocks glass</li>
+                      <li>Squeeze lime wedge into gin and add to glass</li>
+                      <li>Add 1oz tonic to ensure combination</li>
+                      <li>Fill glass with ice</li>
+                      <li>Top with tonic until full</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="old-fashioned">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/old-fashioned.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Old Fashioned</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz bourbon or rye</li>
+                      <li>2-4 dashes aromatic bitters</li>
+                      <li>Barspoon of simple syrup</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a rocks glass</li>
+                      <li>Add one large ice cube and stir until chilled</li>
+                      <li>Garnish with an orange peel</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="manhattan">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/manhattan.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Manhattan</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2.5oz rye or bourbon
+                      <li>1oz Carpano Antica sweet vermouth
+                      <li>2 dashes of Angostura bitters
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Stir all ingredients with ice in a mixing glass until chilled</li>
+                      <li>strain into a chilled coupe</li>
+                      <li>Garnish with a brandied cherry</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="boulevardier">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/boulevardier.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Boulevardier</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz bourbon or rye</li>
+                      <li>1oz campari</li>
+                      <li>1oz sweet vermouth</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into a rocks glass over one large ice cube</li>
+                      <li>Garnish with an orange peel</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="scofflaw">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/scofflaw.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Scofflaw</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz bourbon or rye</li>
+                      <li>1oz dry vermouth</li>
+                      <li>.25oz lemon juice</li>
+                      <li>.5oz true grenadine</li>
+                      <li>2 dashes orange bitters</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a shaker</li>
+                      <li>Fill with ice and shake until chilled</li>
+                      <li>Double-strain into a chilled coupe glass</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="whiskey-sour">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/whiskey-sour.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Whiskey Sour</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz bourbon</li>
+                      <li>.75oz lemon juice</li>
+                      <li>.75oz simple syrup</li>
+                      <li>1 small egg white</li>
+                      <li>1 spritz of Angostura bitters</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add egg and lemon into a cocktail shaker and dry shake unti foamy</li>
+                      <li>Add bourbon and syrup</li>
+                      <li>Shake well and double-strain over ice into a rocks glass</li>
+                      <li>Spray bitters on top of foam</li>
+                      <li>Garnish with a brandied cherry</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="turtle-dove">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/turtle-dove.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Turtle Dove</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz whiskey</li>
+                      <li>1oz grapefruit juice</li>
+                      <li>1tsp simple syrup</li>
+                      <li>2 dashes grapefruit bitters</li>
+                      <li>Small dash of vanilla extract</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a shaker</li>
+                      <li>Add ice and shake until well chilled</li>
+                      <li>Double-strain into a chilled coupe glass</li>
+                      <li>Garnish with a grapefruit twist</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="mint-julep">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/mint-julep.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Mint Julep</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2.5oz bourbon</li>
+                      <li>.75oz simple syrup</li>
+                      <li>1 large mint sprig</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>In a julep tin, gently muddle mint with simple syrup</li>
+                      <li>Pack the tin with crushed ice</li>
+                      <li>Pour bourbon over ice and mound additional ice to top the tin</li>
+                      <li>Garnish with a bouquet of mint</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="kentucky-buck">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/kentucky-buck.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Kentucky Buck</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz bourbon</li>
+                      <li>.75oz lemon juice</li>
+                      <li>.75oz ginger syrup *</li>
+                      <li>2 dashes Angostura bitters</li>
+                      <li>1 strawberry</li>
+                      <li>Club soda</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>In a shaker, muddle strawberry with ginger syrup</li>
+                      <li>Add lemon juice, bourbon, bitters and ice</li>
+                      <li>Shake until chilled</li>
+                      <li>Double -strain into a collins glass over ice and top with club soda</li>
+                      <li>Garnish with a lemon wheel</li>
+                    </ul>
+<br>
+                    <h5>* for ginger syrup, see full recipe at:</h5>
+                    <a href="https://punchdrink.com/recipes/kentucky-buck/" target="blank" class="link"> https://punchdrink.com/recipes/kentucky-buck/</a>
+
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="whiskey-highball">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/whiskey-highball.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Whiskey Highball</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz chilled whiskey</li>
+                      <li>3-4oz cold seltzer water</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Stack several medium-large ice cubes in a collins glass</li>
+                      <li>Pour whiskey into glass, avoiding top of ice</li>
+                      <li>Pour soda water in same manner</li>
+                      <li>Using bar spoon, slowly stir, moving up and down to incorporate ingredients</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="departed">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/the-departed.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">The Departed</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz demarera rum</li>
+                      <li>1oz Campari</li>
+                      <li>.75oz Averna</li>
+                      <li>.5oz reposado mezcal</li>
+                      <li>1 dash Peychaud’s bitters</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into a rocks glass over one large ice cube</li>
+                      <li>Garnish with an orange peel</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="society-punch">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/society-punch.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Society Punch</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz aged rum</li>
+                      <li>1oz brandy</li>
+                      <li>2oz spiced black tea syrup*</li>
+                      <li>1oz sparkling wine</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add rum, brandy and syrup to a shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain into a chilled coupe glass</li>
+                      <li>Top with sparkling wine</li>
+                      <li>Garnish with small pineapple wedge</li>
+
+                      <br>
+                      <h5>* for tea syrup, see full recipe at:</h5>
+                      <a href="http://imbibemagazine.com/saint-cecilias-society-punch-recipe/" target="blank" class="link"> http://imbibemagazine.com/saint-cecilias-society-punch-recipe/</a>
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="bachelor">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/bachelor.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">The Bachelor</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz aged rum</li>
+                      <li>1oz Amaro Meletti</li>
+                      <li>.5oz absinthe</li>
+                      <li>5 dashes aromatic bitters</li>
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into a rocks glass over ice</li>
+                      <li>Garnish with a grapefruit twist</li>
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="daiquiri">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/daiquiri.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Daquiri</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz white rum</li>
+                      <li>1oz lime juice</li>
+                      <li>.75oz simple syrup</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add rum, lime and syrup to a cocktail shaker with ice</li>
+                      <li>Shake until chilled</li>
+                      <li>Strain into a chilled coupe glass</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="pina-colada">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/pina-colada.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Pina Colada</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>.5oz white rum (prefer Plantation 3 Stars)</li>
+                      <li>.5oz overproof rum (prefer Smith & Cross)</li>
+                      <li>.5oz dark rum (prefer Plantation Orginal Dark)</li>
+                      <li>.5oz rhum agricole (prefer Clement Rhum Agricole)</li>
+                      <li>1.5oz pineapple juice</li>
+                      <li>1.5oz Coco Lopez</li>
+                      <li>.5oz lime juice</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Combine all ingredients in a shaker and shake until well chilled</li>
+                      <li>Strain into a chilled hurricane glass filled with pebble or crushed ice</li>
+                      <li>Garnish with an orange slice, brandied cherry and a pineapple leaf</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="mojito">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/mojito.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Mojito</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>10-12 Mint Leaves</li>
+                      <li>2oz white rum</li>
+                      <li>1oz lime juice</li>
+                      <li>.5oz rich simple syrup</li>
+                      <li>Club soda to top</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Place mint leaves in collins glass</li>
+                      <li>Muddle gently</li>
+                      <li>Add rum, lime juice and syrup to glass</li>
+                      <li>Fill ¾ of the glass with crushed ice</li>
+                      <li>Swizzle, using a swizzle stick or bar spoon</li>
+                      <li>Top with a splash of club soda</li>
+                      <li>Top with a mound of crushed ice</li>
+                      <li>Garnish with straw and mint sprig</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="queens-park-swizzle">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/queens.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Queens Park Swizzle</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz demarera rum</li>
+                      <li>1oz simple syrup</li>
+                      <li>1 large sprig of mint</li>
+                      <li>4 dashes of Angostura bitters</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>In a collins or hurricane glass, gently muddle mint leaves with simple syrup</li>
+                      <li>Add lime juice, rum and fill with crushed ice</li>
+                      <li>Swizzle with a swizzle stick or bar spoon</li>
+                      <li>Add additional crushed ice and dash Angostura bitters over the top</li>
+                      <li>Garnish with a mint sprig</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="dark-and-stormy">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/dark-and-stormy.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Dark and Stormy</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz blackstrap rum</li>
+                      <li>1oz lime juice</li>
+                      <li>4oz ginger beer</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>In a collins glass, add rum and lime juice</li>
+                      <li>Add ice and top with ginger beer</li>
+                      <li>Garnish with a lime wheel</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="brave">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/the-brave.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">The Brave</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz blanco tequila</li>
+                      <li>1oz Del Maguey Vida mezcal</li>
+                      <li>.5oz Averna</li>
+                      <li>.25oz Royal Combier</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a small wine glass</li>
+                      <li>Swirl to combine</li>
+                      <li>Mist sides of glass with Angostura bitters</li>
+                      <li>Garnish with a flamed orange peel</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="oaxacan-old-fashioned">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/oaxacan-old-fashioned.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Oaxacan Old Fashioned</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz reposado tequila</li>
+                      <li>.5oz reposado mezcal</li>
+                      <li>2 dashes Angostura bitters</li>
+                      <li>1 barspoon of simple syrup</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Combine all ingredients in a rocks glass with one ice cube (or sphere) large enough to take up most of the glass</li>
+                      <li>Stir until chilled</li>
+                      <li>Garnish with a flamed orange twist</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="latin-trifecta">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/latin-trifecta.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Latin Trifecta</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1oz tequila</li>
+                      <li>1oz Cynar</li>
+                      <li>.5oz dry sherry (oloroso)</li>
+                      <li>3 dashes orange bitters</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to mixing glass</li>
+                      <li>Add ice and stir until chilled</li>
+                      <li>Strain into chilled coupe glass</li>
+                      <li>Garnish with an orange twist</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="mexican-firing-squad">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/mexican-firing-squad.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Mexican Firing Squad</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz blanco tequila</li>
+                      <li>.75oz lime juice</li>
+                      <li>.75oz true grenadine</li>
+                      <li>5 dashes of Angostura bitters</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain over a ice in a rocks glass</li>
+                      <li>Garnish with a lime wheel</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="coronado">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/coronado.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Coronado</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz blanco tequila</li>
+                      <li>1oz Aperol</li>
+                      <li>2oz coconut water</li>
+                      <li>1oz passion fruit juice</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Combine all ingredients in a shaker</li>
+                      <li>Fill with ice and shake until well chilled</li>
+                      <li>Strain into a collins glass over ice</li>
+                      <li>Garnish with a dried orange wheel</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="margarita">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/margarita.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Margarita</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz blanco Tequila</li>
+                      <li>.75oz Orange Liqueur (prefer Cointreau)</li>
+                      <li>.75oz Lime Juice</li>
+                      <li>1tsp Simple Syrup</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients to a cocktail shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain into chilled coupe  or over ice in a rocks glass</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="in-a-flash">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/in-a-flash.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">In a Flash</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>1.5oz blanco tequila</li>
+                      <li>1oz cucumber juice</li>
+                      <li>.5oz lemon juice</li>
+                      <li>.75oz cinnamon simple syrup</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Combine all ingredients in a shaker with ice</li>
+                      <li>Shake until chilled and strain into a rocks glass over ice</li>
+                      <li>Garnish with a thin cucumber wheel</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="paloma">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/paloma.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Paloma</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>2oz blanco tequila</li>
+                      <li>1oz grapefruit juice</li>
+                      <li>.75oz lime juice</li>
+                      <li>.75oz simple syrup</li>
+                      <li>2 dashes of grapefruit bitters</li>
+                      <li>Club soda</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Add all ingredients except soda to a shaker</li>
+                      <li>Add ice and shake until chilled</li>
+                      <li>Strain into a collins glass over ice</li>
+                      <li>Top with club soda</li>
+                      <li>Garnish with a half-wheel of grapefruit</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+<section class="section has-background-white has-text-centered" id="backyard">
+        <div class="container">
+        <div class="columns">
+            <div class="column is-third">
+            <!-- Drink Title -->
+                <div class="notification is-white">
+                  <div class="drink">
+                    <img src="assets/images/backyard.png"  style="float:center;width:340px;height:395px;">
+                  </div>
+                </div>
+            </div>
+                    <!-- Style Title -->
+            <div class="column is-third">
+                <div class="notification is-white">
+                    <div style="float:left;"></div>
+                    <h1 class="title is-size-3">Backyard</h1>
+                    <h2>Ingredients:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>6 mint leaves</li>
+                      <li>.5tsp of green Tabasco</li>
+                      <li>1oz blanco tequila</li>
+                      <li>.5oz Chartreuese</li>
+                      <li>1oz lime juice</li>
+                      <li>.5oz simple syrup</li>
+
+
+
+                    </ul>
+              <br>
+                    <h2>Preparation:</h2>
+
+                    <ul style="list-style-type:none">
+                      <li>Gently muddle mint and Tabasco in a shaker</li>
+                      <li>Add remaining ingredients</li>
+                      <li>Fill with ice and shake until will chilled</li>
+                      <li>Strain into rocks glass over ice</li>
+                      <li>Garnish with a sprig of mint</li>
+
+
+
+                    </ul>
+                      </div>
+                      </div>
+                    </div>
+       </div>
+</section>
+
+
+</body>
+
+
+<!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered" id="foot">
+            <a class="button is-danger is-small is-rounded"style="width: 30%;" id="reset">Start Over</a>
+
+            <p>
+              <strong>Drinkerator</strong> by Marcus, Dean, and Katie.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+</html>
