@@ -1,1 +1,165 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
+#choose, #spiritChoice,  #tequila, #styleChoice1, #styleChoice2 , #shaker, #makeIt {
+  display: none;
+}
+
+/*hide drink recipies  */
+#mai-tai {
+  display: none;
+}
+#martini {
+  display: none;
+}
+#negroni {
+  display: none;
+}
+#hanky-panky {
+  display: none;
+}
+#royal-hawaiian {
+  display: none;
+}
+#seventh-heaven {
+  display: none;
+}
+#slippery-when-wet {
+  display: none;
+}
+#southside {
+  display: none;
+}
+#old-maid {
+  display: none;
+}
+#gin-tonic {
+  display: none;
+}
+#old-fashioned {
+  display: none;
+}
+#manhattan {
+  display: none;
+}
+#boulevardier {
+  display: none;
+}
+#scofflaw {
+  display: none;
+}
+#whiskey-sour {
+  display: none;
+}
+#turtle-dove {
+  display: none;
+}
+#mint-julep {
+  display: none;
+}
+#kentucky-buck {
+  display: none;
+}
+#whiskey-highball {
+  display: none;
+}
+#departed {
+  display: none;
+}
+#society-punch {
+  display: none;
+}
+#bachelor {
+  display: none;
+}
+#daiquiri {
+  display: none;
+}
+#pina-colada {
+  display: none;
+}
+#mojito {
+  display: none;
+}
+#queens-park-swizzle {
+  display: none;
+}
+#dark-and-stormy {
+  display: none;
+}
+#brave {
+  display: none;
+}
+#oaxacan-old-fashioned {
+  display: none;
+}
+#latin-trifecta {
+  display: none;
+}
+#mexican-firing-squad {
+  display: none;
+}
+#coronado {
+  display: none;
+}
+#margarita {
+  display: none;
+}
+#in-a-flash {
+  display: none;
+}
+#paloma {
+  display: none;
+}
+#backyard {
+  display: none;
+}
+/*  */
+#iKnow {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.footer  {
+  background-color: white;
+}
+
+#shakergif {
+  height: 500px;
+  margin-top: -100px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+#cardHalf1 {
+  margin-left: 100px;
+}
+
+.drinkimg {
+  height: 300px;
+  width: 300px;
+}
+#logo {
+  margin-left: -130px;
+
+}
+footer {
+  margin-top: 100px;
+}
+
+#reset {
+  margin-bottom: 20px;
+}
+#foot {
+  margin-right: 100px;
+}
+.question {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
