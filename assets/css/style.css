@@ -1,4 +1,8 @@
-#choose, #gin, #whiskey, #rum, #tequila, #style, #strong, #strong2, #fruity, #fruity2, #refreshing, #refreshing2, #shaker, #makeIt {
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#choose, #spiritChoice,  #tequila, #styleChoice1, #styleChoice2 , #shaker, #makeIt {
   display: none;
 }
 
@@ -154,4 +158,8 @@ footer {
 }
 #foot {
   margin-right: 100px;
+}
+.question {
+  font-size: 30px;
+  margin-bottom: 20px;
 }

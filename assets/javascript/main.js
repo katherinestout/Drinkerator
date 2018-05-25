@@ -4,10 +4,11 @@ $( document ).ready(function() {
 // 1st choice buttons
 $("#iKnow").click(function() {
   $("#doIknow").toggle("slow");
-  $("#gin").toggle("slow");
-  $("#rum").toggle("slow");
-  $("#tequila").toggle("slow");
-  $("#whiskey").toggle("slow");
+  // $("#gin").toggle("slow");
+  // $("#rum").toggle("slow");
+  // $("#tequila").toggle("slow");
+  // $("#whiskey").toggle("slow");
+  $("#spiritChoice").toggle("slow");
 });
 
 // Spirit Buttons
@@ -17,9 +18,10 @@ $("#gin").click(function()
   {
     spirit ="gin"
     $("#spiritChoice").toggle("slow");
-    $("#strong").toggle("slow");
-    $("#fruity").toggle("slow");
-    $("#refreshing").toggle("slow");
+    // $("#strong").toggle("slow");
+    // $("#fruity").toggle("slow");
+    // $("#refreshing").toggle("slow");
+    $("#styleChoice1").toggle("slow");
   }
 );
 
@@ -27,9 +29,10 @@ $("#rum").click(function()
   {
     spirit ="rum"
     $("#spiritChoice").toggle("slow");
-    $("#strong").toggle("slow");
-    $("#fruity").toggle("slow");
-    $("#refreshing").toggle("slow");
+    // $("#strong").toggle("slow");
+    // $("#fruity").toggle("slow");
+    // $("#refreshing").toggle("slow");
+    $("#styleChoice1").toggle("slow");
   }
 );
 
@@ -37,9 +40,10 @@ $("#tequila").click(function()
   {
     spirit ="tequila"
     $("#spiritChoice").toggle("slow");
-    $("#strong").toggle("slow");
-    $("#fruity").toggle("slow");
-    $("#refreshing").toggle("slow");
+    // $("#strong").toggle("slow");
+    // $("#fruity").toggle("slow");
+    // $("#refreshing").toggle("slow");
+    $("#styleChoice1").toggle("slow");
   }
 );
 
@@ -47,9 +51,10 @@ $("#whiskey").click(function()
   {
     spirit ="whiskey"
     $("#spiritChoice").toggle("slow");
-    $("#strong").toggle("slow");
-    $("#fruity").toggle("slow");
-    $("#refreshing").toggle("slow");
+    // $("#strong").toggle("slow");
+    // $("#fruity").toggle("slow");
+    // $("#refreshing").toggle("slow");
+    $("#styleChoice1").toggle("slow");
   }
 );
 
@@ -123,7 +128,7 @@ $("#strong").click(function() {
     else if (spirit == "whiskey") {
       var drinkChoice = whiskeyStrong[Math.floor(Math.random() * whiskeyStrong.length)];
     }
-    $("#styleChoice").toggle("slow");
+    $("#styleChoice1").toggle("slow");
     $("#makeIt").toggle("slow");
 
     $("#makeIt").click(function() {
@@ -151,7 +156,7 @@ $("#strong").click(function() {
       else if (spirit == "whiskey") {
         var drinkChoice = whiskeyFruity[Math.floor(Math.random() * whiskeyFruity.length)];
       }
-      $("#styleChoice").toggle("slow");
+      $("#styleChoice1").toggle("slow");
       $("#makeIt").toggle("slow");
 
       $("#makeIt").click(function() {
@@ -179,7 +184,7 @@ $("#strong").click(function() {
         else if (spirit == "whiskey") {
           var drinkChoice = whiskeyRefreshing[Math.floor(Math.random() * whiskeyRefreshing.length)];
         }
-        $("#styleChoice").toggle("slow");
+        $("#styleChoice1").toggle("slow");
         $("#makeIt").toggle("slow");
 
         $("#makeIt").click(function() {
@@ -197,18 +202,20 @@ $("#strong").click(function() {
 // I don't know buttons
 $("#dontKnow").click(function() {
   $("#doIknow").toggle("slow");
-  $("#strong2").toggle("slow");
-  $("#fruity2").toggle("slow");
-  $("#refreshing2").toggle("slow");
+  // $("#strong2").toggle("slow");
+  // $("#fruity2").toggle("slow");
+  // $("#refreshing2").toggle("slow");
+  $("#styleChoice2").toggle("slow");
 });
 
 
 $("#strong2").click(function() {
     var drinkChoice = allStrong[Math.floor(Math.random() * allStrong.length)];
     console.log(drinkChoice);
-    $("#strong2").toggle("slow");
-    $("#fruity2").toggle("slow");
-    $("#refreshing2").toggle("slow");
+    // $("#strong2").toggle("slow");
+    // $("#fruity2").toggle("slow");
+    // $("#refreshing2").toggle("slow");
+    $("#styleChoice2").toggle("slow");
     $("#makeIt").toggle("slow");
 
     $("#makeIt").click(function() {
@@ -224,9 +231,10 @@ $("#strong2").click(function() {
 
 $("#fruity2").click(function() {
     var drinkChoice = allFruity[Math.floor(Math.random() * allFruity.length)];
-    $("#strong2").toggle("slow");
-    $("#fruity2").toggle("slow");
-    $("#refreshing2").toggle("slow");
+    // $("#strong2").toggle("slow");
+    // $("#fruity2").toggle("slow");
+    // $("#refreshing2").toggle("slow");
+    $("#styleChoice2").toggle("slow");
     $("#makeIt").toggle("slow");
 
     $("#makeIt").click(function() {
@@ -242,9 +250,10 @@ $("#fruity2").click(function() {
 
 $("#refreshing2").click(function() {
     var drinkChoice = allRefreshing[Math.floor(Math.random() * allRefreshing.length)];
-    $("#strong2").toggle("slow");
-    $("#fruity2").toggle("slow");
-    $("#refreshing2").toggle("slow");
+    // $("#strong2").toggle("slow");
+    // $("#fruity2").toggle("slow");
+    // $("#refreshing2").toggle("slow");
+    $("#styleChoice2").toggle("slow");
     $("#makeIt").toggle("slow");
 
     $("#makeIt").click(function() {
