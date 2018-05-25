@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-#choose, #spiritChoice,  #tequila, #styleChoice1, #styleChoice2 , #shaker, #makeIt {
+#choose, #spiritChoice, #styleChoice1, #styleChoice2 , #shaker, #makeIt {
   display: none;
 }
 
