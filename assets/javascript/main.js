@@ -1,157 +1,271 @@
-$(document).ready(function() {
+$( document ).ready(function() {
 
 
+// 1st choice buttons
+$("#iKnow").click(function() {
+  $("#doIknow").toggle("slow");
+  $("#gin").toggle("slow");
+  $("#rum").toggle("slow");
+  $("#tequila").toggle("slow");
+  $("#whiskey").toggle("slow");
+});
+
+// Spirit Buttons
 var spirit = ""
 
 $("#gin").click(function()
   {
     spirit ="gin"
+    $("#spiritChoice").toggle("slow");
+    $("#strong").toggle("slow");
+    $("#fruity").toggle("slow");
+    $("#refreshing").toggle("slow");
   }
 );
 
 $("#rum").click(function()
-    {
-        spirit="rum"
-    }
-);
-
-$("#whiskey").click(function()
-    {
-        spirit="whiskey"
-    }
+  {
+    spirit ="rum"
+    $("#spiritChoice").toggle("slow");
+    $("#strong").toggle("slow");
+    $("#fruity").toggle("slow");
+    $("#refreshing").toggle("slow");
+  }
 );
 
 $("#tequila").click(function()
-    {
-        spirit="tequila"
-    }
+  {
+    spirit ="tequila"
+    $("#spiritChoice").toggle("slow");
+    $("#strong").toggle("slow");
+    $("#fruity").toggle("slow");
+    $("#refreshing").toggle("slow");
+  }
 );
-//I know What I Want
-var ginRefreshing= [
-    "Southside", "Old Maid", "Gin & Tonic"
+
+$("#whiskey").click(function()
+  {
+    spirit ="whiskey"
+    $("#spiritChoice").toggle("slow");
+    $("#strong").toggle("slow");
+    $("#fruity").toggle("slow");
+    $("#refreshing").toggle("slow");
+  }
+);
+
+// I know my spirit arrays - Gin
+var ginStrong = [
+  "martini", "negroni", "hanky-panky"
 ];
-var whiskeyRefreshing= [
-    "Mint Julep", "Kentucky Buck", "Whiskey Highball"
+var ginFruity = [
+    "royal-hawaiian", "seventh-heaven" , "slippery-when-wet"
 ];
-var rumRefreshing= [
-    "Mojito", "Queens Park Swizzle", "Dark and Stormy"
-];
-var tequilaRefreshing= [
-    "In a Flash", "Paloma", "Backyard"
+var ginRefreshing = [
+    "southside", "old-maid", "gin-tonic"
 ];
 
-$("#refreshing").click(function() {
-    if (spirit == "gin") {
-        var drinkChoice = ginRefreshing[Math.floor(Math.random() * ginRefreshing.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "rum") {
-        var drinkChoice = rumRefreshing[Math.floor(Math.random() * rumRefreshing.length)];
-        console.log(drinkChoice); 
-    }
-    if (spirit == "whiskey") {
-        var drinkChoice = whiskeyRefreshing[Math.floor(Math.random() * whiskeyRefreshing.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "tequila") {
-        var drinkChoice = tequilaRefreshing[Math.floor(Math.random() * tequilaRefreshing.length)];
-        console.log(drinkChoice);
-
-    }
-})
-
-var ginFruity= [
-    "Royal Hawaiian", "Seventh Heaven" , "Slippery When Wet"
+// I know my spirit arrays - Rum
+var rumStrong = [
+  "departed", "society-punch", "bachelor"
+];var rumFruity = [
+    "daiquiri", "mai-tai", "pina-colada"
+];var rumRefreshing = [
+    "mojito", "queens-park-swizzle", "dark-and-stormy"
 ];
-var rumFruity= [
-    "Daiquiri", "Mai-Tai", "Pina Colada" 
-];
-var whiskeyFruity = [
-    "Scofflaw", "Whiskey Sour", "Turtle Dove"
+
+// I know my spirit arrays - tequila
+var tequilaStrong = [
+    "brave", "oaxacan-old-fashioned", "latin-trifecta"
 ];
 var tequilaFruity = [
-    "Mexican Firing Squad", "Coronado", "Margarita"
+    "mexican-firing-squad", "coronado", "margarita"
+];
+var tequilaRefreshing = [
+    "in-a-flash", "paloma", "backyard"
 ];
 
-$("#fruity").click(function() {
-    if (spirit == "gin") {
-        var drinkChoice = ginFruity[Math.floor(Math.random() * ginFruity.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "rum") {
-        var drinkChoice = rumFruity[Math.floor(Math.random() * rumFruity.length)];
-        console.log(drinkChoice); 
-    }
-    if (spirit == "whiskey") {
-        var drinkChoice = whiskeyFruity[Math.floor(Math.random() * whiskeyFruity.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "tequila") {
-        var drinkChoice = tequilaFruity[Math.floor(Math.random() * tequilaFruity.length)];
-        console.log(drinkChoice);
-
-    }
-})
-
-var ginStrong = [
-  "martini", "negroni", "hanky panky"
-];
-var rumStrong = [
-  "The Departed", "Society Punch", "The Bachelor"
-];
+// I know my spirit arrays - Whiskey
 var whiskeyStrong = [
-    "Old Fashioned", "Manhattan", "Boulevardier"
+    "old-fashioned", "manhattan", "boulevardier"
 ];
-var tequilaStrong = [
-    "The Brave", "Oaxacan Old Fashioned", "Latin Trifecta"
+var whiskeyFruity = [
+    "scofflaw", "whiskey-sour", "turtle-dove"
+];
+var whiskeyRefreshing = [
+    "mint-julep", "kentucky-buck", "whiskey-highball"
 ];
 
+// I don't know arrays
+var allStrong = [
+    "martini", "negroni", "hanky-panky", "departed", "society-punch", "bachelor", "old-fashioned", "manhattan", "boulevardier","brave", "oaxacan-old-fashioned", "latin-trifecta"
+];
+
+var allFruity = [
+    "daiquiri", "mai-tai", "pina-colada", "royal-hawaiian", "seventh-heaven", "slippery-when-wet", "scofflaw", "whiskey-sour", "turtle-dove", "mexican-firing-squad", "coronado", "margarita"
+];
+
+var allRefreshing = [
+    "in-a-flash", "paloma", "backyard", "mojito", "queens-park-swizzle", "dark-and-stormy", "mint-julep", "kentucky-buck", "whiskey-highball", "southside", "old-maid", "gin-tonic"
+];
+
+
+// Style Buttons Click Functions
 $("#strong").click(function() {
+  if (spirit == "gin") {
+    var drinkChoice = ginStrong[Math.floor(Math.random() * ginStrong.length)];
+    }
+    else if (spirit == "rum") {
+      var drinkChoice = rumStrong[Math.floor(Math.random() * rumStrong.length)];
+    }
+    else if (spirit == "tequila") {
+      var drinkChoice = tequilaStrong[Math.floor(Math.random() * tequilaStrong.length)];
+    }
+    else if (spirit == "whiskey") {
+      var drinkChoice = whiskeyStrong[Math.floor(Math.random() * whiskeyStrong.length)];
+    }
+    $("#styleChoice").toggle("slow");
+    $("#makeIt").toggle("slow");
+
+    $("#makeIt").click(function() {
+      console.log(drinkChoice)
+      $("#makeIt").toggle("slow");
+        $("#shaker").toggle("slow");
+        setTimeout(function(){
+          $("#shaker").toggle("slow"); }, 3000);
+        setTimeout(function(){
+          $("#" + drinkChoice).toggle("slow"); }, 3000);
+        });
+
+  });
+
+  $("#fruity").click(function() {
     if (spirit == "gin") {
-        var drinkChoice = ginStrong[Math.floor(Math.random() * ginStrong.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "rum") {
-        var drinkChoice = rumStrong[Math.floor(Math.random() * rumStrong.length)];
-        console.log(drinkChoice); 
-    }
-    if (spirit == "whiskey") {
-        var drinkChoice = whiskeyStrong[Math.floor(Math.random() * whiskeyStrong.length)];
-        console.log(drinkChoice);
-    }
-    if (spirit == "tequila") {
-        var drinkChoice = tequilaStrong[Math.floor(Math.random() * tequilaStrong.length)];
-        console.log(drinkChoice);
+      var drinkChoice = ginFruity[Math.floor(Math.random() * ginFruity.length)];
+      }
+      else if (spirit == "rum") {
+        var drinkChoice = rumFruity[Math.floor(Math.random() * rumFruity.length)];
+      }
+      else if (spirit == "tequila") {
+        var drinkChoice = tequilaFruity[Math.floor(Math.random() * tequilaFruity.length)];
+      }
+      else if (spirit == "whiskey") {
+        var drinkChoice = whiskeyFruity[Math.floor(Math.random() * whiskeyFruity.length)];
+      }
+      $("#styleChoice").toggle("slow");
+      $("#makeIt").toggle("slow");
 
-    }
-})
+      $("#makeIt").click(function() {
+        console.log(drinkChoice)
+        $("#makeIt").toggle("slow");
+          $("#shaker").toggle("slow");
+          setTimeout(function(){
+            $("#shaker").toggle("slow"); }, 3000);
+          setTimeout(function(){
+            $("#" + drinkChoice).toggle("slow"); }, 3000);
+          });
 
-})
-//I Don't Know What I Want
-// var allStrong= [
-//     "martini", "negroni", "hanky panky", "The Departed", "Society Punch", "The Bachelor", "Old Fashioned", "Manhattan", "Boulevardier","The Brave", "Oaxacan Old Fashioned", "Latin Trifecta" 
-// ];
-// var allFruity= [
-//     "Daiquiri", "Mai-Tai", "Pina Colada", "Royal Hawaiian", "Seventh Heaven" , "Slippery When Wet", "Scofflaw", "Whiskey Sour", "Turtle Dove", "Mexican Firing Squad", "Coronado", "Margarita" 
-// ];
-// var allRefreshing = [
-//     "In a Flash", "Paloma", "Backyard", "Mojito", "Queens Park Swizzle", "Dark and Stormy", "Mint Julep", "Kentucky Buck", "Whiskey Highball", "Southside", "Old Maid", "Gin & Tonic" 
-// ];
+    });
+
+    $("#refreshing").click(function() {
+      if (spirit == "gin") {
+        var drinkChoice = ginRefreshing[Math.floor(Math.random() * ginRefreshing.length)];
+        }
+        else if (spirit == "rum") {
+          var drinkChoice = rumRefreshing[Math.floor(Math.random() * rumRefreshing.length)];
+        }
+        else if (spirit == "tequila") {
+          var drinkChoice = tequilaRefreshing[Math.floor(Math.random() * tequilaRefreshing.length)];
+        }
+        else if (spirit == "whiskey") {
+          var drinkChoice = whiskeyRefreshing[Math.floor(Math.random() * whiskeyRefreshing.length)];
+        }
+        $("#styleChoice").toggle("slow");
+        $("#makeIt").toggle("slow");
+
+        $("#makeIt").click(function() {
+          console.log(drinkChoice)
+          $("#makeIt").toggle("slow");
+            $("#shaker").toggle("slow");
+            setTimeout(function(){
+              $("#shaker").toggle("slow"); }, 3000);
+            setTimeout(function(){
+              $("#" + drinkChoice).toggle("slow"); }, 3000);
+            });
+
+      });
+
+// I don't know buttons
+$("#dontKnow").click(function() {
+  $("#doIknow").toggle("slow");
+  $("#strong2").toggle("slow");
+  $("#fruity2").toggle("slow");
+  $("#refreshing2").toggle("slow");
+});
 
 
-// $("#fruity").click(function() {
-//         var drinkChoice = allFruity[Math.floor(Math.random() * allFruity.length)];
-//         console.log(drinkChoice);
-//     }
-// );
-// $("#strong").click(function() {
-//     var drinkChoice = allStrong[Math.floor(Math.random() * allStrong.length)];
-//     console.log(drinkChoice);
-//     }
-// );
-// $("#refreshing").click(function() {
-    // var drinkChoice = allRefreshing[Math.floor(Math.random() * allRefreshing.length)];
-    // console.log(drinkChoice);
+$("#strong2").click(function() {
+    var drinkChoice = allStrong[Math.floor(Math.random() * allStrong.length)];
+    console.log(drinkChoice);
+    $("#strong2").toggle("slow");
+    $("#fruity2").toggle("slow");
+    $("#refreshing2").toggle("slow");
+    $("#makeIt").toggle("slow");
+
+    $("#makeIt").click(function() {
+      console.log(drinkChoice)
+      $("#makeIt").toggle("slow");
+        $("#shaker").toggle("slow");
+        setTimeout(function(){
+          $("#shaker").toggle("slow"); }, 3000);
+        setTimeout(function(){
+          $("#" + drinkChoice).toggle("slow"); }, 3000);
+  });
+});
+
+$("#fruity2").click(function() {
+    var drinkChoice = allFruity[Math.floor(Math.random() * allFruity.length)];
+    $("#strong2").toggle("slow");
+    $("#fruity2").toggle("slow");
+    $("#refreshing2").toggle("slow");
+    $("#makeIt").toggle("slow");
+
+    $("#makeIt").click(function() {
+      console.log(drinkChoice)
+      $("#makeIt").toggle("slow");
+        $("#shaker").toggle("slow");
+        setTimeout(function(){
+          $("#shaker").toggle("slow"); }, 3000);
+        setTimeout(function(){
+          $("#" + drinkChoice).toggle("slow"); }, 3000);
+  });
+});
+
+$("#refreshing2").click(function() {
+    var drinkChoice = allRefreshing[Math.floor(Math.random() * allRefreshing.length)];
+    $("#strong2").toggle("slow");
+    $("#fruity2").toggle("slow");
+    $("#refreshing2").toggle("slow");
+    $("#makeIt").toggle("slow");
+
+    $("#makeIt").click(function() {
+      console.log(drinkChoice)
+      $("#makeIt").toggle("slow");
+        $("#shaker").toggle("slow");
+        setTimeout(function(){
+          $("#shaker").toggle("slow"); }, 3000);
+        setTimeout(function(){
+          $("#" + drinkChoice).toggle("slow"); }, 3000);
+  });
+});
+
+var reset = function() {
+  location.reload();
+}
+$("#reset").click(function() {
+  reset();
+});
 
 
+});
 
+// Make My Drink Button
